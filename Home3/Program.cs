@@ -5,12 +5,12 @@
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if(num >= 0)
-if(num % 2 > 0 ) Console.WriteLine($"{num} не является чётным");
-else 
-Console.WriteLine($"{num} является чётным");
+if (num >= 0)
+    if (num % 2 > 0) Console.WriteLine($"{num} не является чётным");
+    else
+        Console.WriteLine($"{num} является чётным");
 
-if(num < 0)
-if(-num % 2 > 0) Console.WriteLine($"{num} не является чётным");
-else 
-Console.WriteLine($"{num} является чётным");
+if (num < 0)
+    if (-num % 2 > 0) Console.WriteLine($"{num} не является чётным");
+    else
+        Console.WriteLine($"{num} является чётным");
