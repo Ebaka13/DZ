@@ -1,6 +1,6 @@
 ﻿// Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
 Console.Write("Введи трёхзначное число: ");
-int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
-string stringNumber = Convert.ToString(threeDigitNumber);
-Console.WriteLine("2 цифра -> "+stringNumber[1]);
+int Num = Convert.ToInt32(Console.ReadLine());
+string stringNum = Convert.ToString(Num);
+Console.WriteLine("2 цифра -> "+stringNum[1]);
