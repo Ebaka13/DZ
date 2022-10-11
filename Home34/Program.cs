@@ -1,11 +1,12 @@
-﻿int[] CreateArrayRndInt(int size)
+﻿int[] CreateArrayRndIntTrio(int size, int min, int max)
+
 {
     int[] array = new int[size];
     var rnd = new Random();
 
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next(100, 1000);
+        array[i] = rnd.Next(min, max + 1);
     }
     return array;
 }
@@ -19,16 +20,19 @@ void PrintArray(int[] array)
     }
     Console.WriteLine("]");
 }
-int QuantityEvenNum(int[] array)
+int[] GetSumEvenNum(int[] array)
 {
-    int counter = default;
+    int sumEvenNum = default;
+
+
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i] % 2 == 0) counter++;
+        if (array[i] % 2 == 0) sumEvenNum++;
     }
-    return counter;
+
+    return new int[] { sumEvenNum };
 }
-int[] arr = CreateArrayRndInt(10);
+int[] arr = CreateArrayRndIntTrio(5, 100, 999);
 PrintArray(arr);
-int quantityEvenNum = QuantityEvenNum(arr);
-Console.WriteLine(quantityEvenNum);
+int[] getSumEvenNum = GetSumEvenNum(arr);
+Console.WriteLine($"Количество чётных чисел в массиве  {getSumEvenNum[0]}");
