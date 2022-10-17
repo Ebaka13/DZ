@@ -28,19 +28,9 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine("]");
     }
 }
-void PrintArray(int[] array)
+void FindSum(int[,] matrix)
 {
-    Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (i < array.Length - 1) Console.Write($"{array[i]}, ");
-        else Console.Write($"{array[i]}");
-    }
-    Console.WriteLine("]");
-}
-void ArithmeticalMeanColumn(int[,] matrix)
-{
-    double arithmeticalMeanColumn = 0;
+    double findSum = 0;
     double sumColumns = 0;
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
@@ -48,11 +38,11 @@ void ArithmeticalMeanColumn(int[,] matrix)
         {
             sumColumns += matrix[i, j];
         }
-        arithmeticalMeanColumn = sumColumns / matrix.GetLength(0);
-        Console.WriteLine($"Среднеарифметическое {j + 1} столбца = {arithmeticalMeanColumn}");
+        findSum = sumColumns / matrix.GetLength(0);
+        Console.WriteLine($"Среднеарифметическое {j + 1} столбца = {findSum}");
         sumColumns = 0;
     }
 }
 int[,] array2D = CreateMatrixRndInt(m, n, -10, 10);
 PrintMatrix(array2D);
-ArithmeticalMeanColumn(array2D);
+FindSum(array2D);
