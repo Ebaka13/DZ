@@ -6,7 +6,7 @@ int Akkerman(int numM, int numN)
 {
     if (numM == 0) return numN + 1;
     if ((numN == 0) && (numM > 0)) return Akkerman(numM - 1, 1);
-    return Akkerman(numM - 1, AkkermanFunction(numM, numN - 1));
+    return Akkerman(numM - 1, Akkerman(numM, numN - 1));
 }
 int result = Akkerman(numberM, numberN);
 if(numberM >= 0 && numberN >= 0) 
