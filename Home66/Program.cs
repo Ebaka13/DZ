@@ -1,12 +1,12 @@
 ﻿Console.WriteLine("Введите первое число: ");
-int numF = Convert.ToInt32(Console.ReadLine());
+int numM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
-int numS = Convert.ToInt32(Console.ReadLine());
-int Sum(int numF, int numS)
+int numN = Convert.ToInt32(Console.ReadLine());
+int Sum(int numM, int numN)
 {
-    if (numF < numS) return numS + Sum(numF, numS - 1);
-    if (numF > numS) return numS + Sum(numF, numS + 1);
-    return numF;
+    if (numM < numN) return numN + Sum(numM, numN - 1);
+    if (numM > numN) return numN + Sum(numM, numN + 1);
+    return numM;
 }
-int result = Sum(numF, numS);
-Console.WriteLine($"Сумма натуральных элементов в промежутке от {numF} до {numS} -> {result}");
+int result = Sum(numM, numN);
+Console.WriteLine($"Сумма натуральных элементов в промежутке от {numM} до {numN} -> {result}");
